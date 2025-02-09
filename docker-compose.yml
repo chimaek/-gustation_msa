@@ -1,6 +1,6 @@
 services:
   kuke-board-mysql:
-    image: mysql:latest
+    image: mysql:8.0.38
     container_name: kuke-board-mysql
     restart: always
     environment:
@@ -8,8 +8,8 @@ services:
       MYSQL_DATABASE: kuke_board
     ports:
       - "3306:3306"
-    volumes:
-      - ~/mysql:/var/lib/mysql
+#    volumes:
+#      - ~/mysql:/var/lib/mysql
 
   kuke-redis:
     image: redis:alpine
