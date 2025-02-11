@@ -1,7 +1,9 @@
 package kuke.board.article.entities;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 /**
  * Article Entity
@@ -18,6 +20,8 @@ import lombok.Getter;
 
  */
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Article {
     private Long articleId;
     private String title;
@@ -27,16 +31,5 @@ public class Article {
     private String createdAt;
     private String modifiedAt;
 
-
-
-    public Article(Long articleId, String title, String content, Long boardId, Long writerId, String createdAt, String modifiedAt) {
-        this.articleId = articleId;
-        this.title = title;
-        this.content = content;
-        this.boardId = boardId;
-        this.writerId = writerId;
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
-    }
 
 }
